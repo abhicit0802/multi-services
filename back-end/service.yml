@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: back-end
+spec:
+  selector:
+    app: back-end
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8090
+  type: NodePort

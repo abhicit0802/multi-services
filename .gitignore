@@ -1,0 +1,10 @@
+
+.gradle/
+.idea/
+back-end/build/
+client-app/build/
+client-app/out/
+back-end/out/
+gradle/
+gradlew
+gradlew.bat

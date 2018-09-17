@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-end
+spec:
+  selector:
+      matchLabels:
+        app: front-end
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: front-end
+    spec:
+      containers:
+        - name: front-end
+          image: abhinavtiwary/client-app
+          imagePullPolicy: Always
+          env:
+            - name: EXPECTED_URI
+              value: http://back-end.default.svc.cluster.local
+          ports:
+            - containerPort: 8080

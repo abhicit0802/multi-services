@@ -1,0 +1,4 @@
+rootProject.name = 'multi-services'
+include 'back-end'
+include 'client-app'
+
