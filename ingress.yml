@@ -5,18 +5,11 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  backend:
-    serviceName: front-end
-    servicePort: 80
   rules:
   - host: abhinavppp.com
     http:
       paths:
       - path: /
         backend:
-          serviceName: front-end
-          servicePort: 8080
-      - path: /me
-        backend:
-          serviceName: back-end
-          servicePort: 8090
+          serviceName: ambassador
+          servicePort: 80

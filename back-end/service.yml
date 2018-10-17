@@ -2,6 +2,15 @@ kind: Service
 apiVersion: v1
 metadata:
   name: back-end
+  annotations:
+      getambassador.io/config: |
+        ---
+        apiVersion: ambassador/v0
+        kind:  Mapping
+        name:  backend
+        prefix: /backend/
+        rewrite: /api/backend
+        service: back-end
 spec:
   selector:
     app: back-end
@@ -9,4 +18,4 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 8090
-  type: NodePort
+  type: ClusterIP
