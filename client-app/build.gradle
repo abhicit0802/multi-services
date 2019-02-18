@@ -46,7 +46,7 @@ dependencies {
 
 scmVersion {
     tag {
-        println("hello")
+        println("hello1")
         prefix = 'frontabhi'
     }
 }
