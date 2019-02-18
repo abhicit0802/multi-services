@@ -51,6 +51,6 @@ scmVersion {
 
     }
     nextVersion {
-        suffix = "alpha"
+        suffix = "alpha-1"
     }
 }
