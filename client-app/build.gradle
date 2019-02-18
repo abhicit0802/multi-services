@@ -51,6 +51,7 @@ scmVersion {
 
     }
     nextVersion {
-        suffix = "-rc1"
+        suffix = 'alpha'
+        separator = '-'
     }
 }
