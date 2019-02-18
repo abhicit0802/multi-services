@@ -48,5 +48,6 @@ scmVersion {
     tag {
         println("hello11")
         prefix = 'frontabhi'
+        suffix = "alpha"
     }
 }
