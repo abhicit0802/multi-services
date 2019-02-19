@@ -55,5 +55,5 @@ scmVersion {
         separator = '-'
     }
 
-    versionIncrementer 'incrementPrelease'
+    versionIncrementer 'incrementPrerelease'
 }
