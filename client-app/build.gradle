@@ -46,14 +46,12 @@ dependencies {
 
 scmVersion {
     tag {
-        println("hello112dd11")
+        println("hello112djjd11")
         prefix = 'frontabhi'
 
     }
     nextVersion {
         suffix = 'rc'
         separator = '-'
-        serializer = { nextVersionConfig, version -> println nextVersionConfig + " " + version}
-        deserializer = { nextVersionConfig, position -> println nextVersionConfig + " " + version}
     }
 }
