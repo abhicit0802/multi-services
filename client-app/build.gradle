@@ -50,10 +50,6 @@ scmVersion {
         prefix = 'frontabhi'
 
     }
-    nextVersion {
-        suffix = 'alpha'
-        separator = '-'
-    }
 
     versionIncrementer  'incrementPrerelease'
 }
