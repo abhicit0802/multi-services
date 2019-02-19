@@ -1,32 +1,13 @@
 buildscript {
-    repositories { jcenter() }
-    dependencies {
-        classpath 'com.netflix.nebula:nebula-release-plugin:6.3.5'
+    repositories {
+        mavenCentral()
     }
 }
 
+plugins {
+    id 'pl.allegro.tech.build.axion-release' version '1.10.0'
+}
+
 allprojects {
-    apply plugin: 'nebula.release'
-
-    scmVersion {
-        tag {
-            prefix = ''
-        }
-
-        // Incrementing policy
-        versionIncrementer 'incrementMinor'  //default
-        branchVersionIncrementer = [
-                'master': 'incrementPrerelease',
-                'release/.*': 'incrementPrerelease',
-                'hotfix/.*': 'incrementPrerelease'
-        ]
-
-        // Decorators
-        versionCreator 'simple'
-        branchVersionCreator = [
-                'feature/.*': 'versionWithBranch'
-        ]
-
-        localOnly = true  //no pushing to remote
-    }
+    apply plugin: 'pl.allegro.tech.build.axion-release'
 }
