@@ -46,9 +46,13 @@ dependencies {
 
 scmVersion {
     tag {
-        println("hello11idddsshhdsdjjjdsdddddh211")
+        println("hello11iddh211")
         prefix = 'frontabhi'
 
+    }
+    nextVersion {
+        suffix = 'alpha'
+        separator = '-'
     }
 
     versionIncrementer  'incrementPrerelease'
