@@ -1,13 +1,10 @@
 buildscript {
-    repositories {
-        mavenCentral()
+    repositories { jcenter() }
+    dependencies {
+        classpath 'com.netflix.nebula:nebula-release-plugin:6.3.5'
     }
 }
 
-plugins {
-    id 'pl.allegro.tech.build.axion-release' version '1.10.0'
-}
-
 allprojects {
-    apply plugin: 'pl.allegro.tech.build.axion-release'
+    apply plugin: 'nebula.release'
 }
