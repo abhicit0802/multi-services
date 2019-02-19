@@ -48,8 +48,6 @@ scmVersion {
     tag {
         println("hello11iddh211")
         prefix = 'frontabhi'
-        suffix = 'alpha'
-        separator = '-'
 
     }
     nextVersion {
@@ -57,5 +55,5 @@ scmVersion {
         separator = '-'
     }
 
-    versionIncrementer = 'incrementPrerelease'
+    versionIncrementer  'incrementPrerelease'
 }
