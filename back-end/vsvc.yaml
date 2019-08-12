@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: back-end
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - poc-gateway
+  http:
+  - match:
+    - uri:
+        exact: /api/backend
+    route:
+    - destination:
+        host: back-end
+        port:
+          number: 80
